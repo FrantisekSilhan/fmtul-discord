@@ -1,0 +1,20 @@
+{
+  "name": "fmtul",
+  "module": "src/index.ts",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "start:dev": "bun run --watch src/index.ts",
+    "start:prod": "bun run --production src/index.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@projectdysnomia/dysnomia": "^0.2.3"
+  }
+}
