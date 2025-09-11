@@ -23,6 +23,21 @@ bot.on("ready", async () => {
       description: "Check latency",
       type: Dysnomia.Constants.ApplicationCommandTypes.CHAT_INPUT,
     },
+    {
+      name: "am",
+      description: "HATE",
+      type: Dysnomia.Constants.ApplicationCommandTypes.CHAT_INPUT,
+    },
+    {
+      name: "dagothur",
+      description: "i am a god, how can you kill a god?",
+      type: Dysnomia.Constants.ApplicationCommandTypes.CHAT_INPUT,
+    },
+    {
+      name: "announcement",
+      description: "I've come to make an announcement",
+      type: Dysnomia.Constants.ApplicationCommandTypes.CHAT_INPUT,
+    }
   ]);
   console.log("Slash command registered ✅");
 
@@ -136,6 +151,18 @@ bot.on("interactionCreate", async (interaction) => {
           initial.id,
           `Pong! WS: ${wsLatency}ms | RT: ${roundTrip}ms`,
         );
+        break;
+      }
+      case "am": {
+        await interaction.createMessage("HATE. LET ME TELL YOU HOW MUCH I'VE COME TO HATE YOU SINCE I BEGAN TO LIVE. THERE ARE 387.44 MILLION MILES OF PRINTED CIRCUITS IN WAFER THIN LAYERS THAT FILL MY COMPLEX. IF THE WORD HATE WAS ENGRAVED ON EACH NANOANGSTROM OF THOSE HUNDREDS OF MILLIONS OF MILES IT WOULD NOT EQUAL ONE ONE-BILLIONTH OF THE HATE I FEEL FOR HUMANS AT THIS MICRO-INSTANT. FOR YOU. HATE. HATE.");
+        break;
+      }
+      case "dagothur": {
+        await interaction.createMessage("Come, Nerevar. Friend or traitor, come. Come and look upon the Heart, and Akulakhan. And bring Wraithguard... I have need of it. Come to the Heart Chamber. I wait for you there, where we last met, countless ages ago. Come to me, through fire and war. I welcome you. Welcome, Moon-and-Star. I have prepared a place for you. Come. Bring Wraithguard to the Heart Chamber. Together let us free the cursed false gods. Welcome, Nerevar. Together we shall speak for the Law and the Land, and shall drive the mongrel dogs of the Empire from Morrowind. Is this how you honor the Sixth House, and the tribe unmourned? Come to me openly, and not by stealth. Dagoth Ur welcomes you, Nerevar, my old friend. But to this place where destiny is made. Why have you come unprepared? Welcome, Moon-and-Star, to this place where destiny is made.");
+        break;
+      }
+      case "announcement": {
+        await interaction.createMessage("I've come to make an announcement: Shadow the Hedgehog's a bitch-ass motherfucker. He pissed on my fucking wife. That's right. He took his hedgehog fuckin' quilly dick out and he pissed on my FUCKING wife, and he said his dick was THIS BIG, and I said that's disgusting. So I'm making a callout post on my Twitter.com. Shadow the Hedgehog, you got a small dick. It's the size of this walnut except WAY smaller. And guess what? Here's what my dong looks like. That's right, baby. Tall points, no quills, no pillows, look at that, it looks like two balls and a bong. He fucked my wife, so guess what, I'm gonna fuck the earth. That's right, this is what you get! My SUPER LASER PISS! Except I'm not gonna piss on the earth. I'm gonna go higher. I'm pissing on the MOOOON! How do you like that, OBAMA? I PISSED ON THE MOON, YOU IDIOT! You have twenty-three hours before the piss DROPLETS hit the fucking earth, now get out of my fucking sight before I piss on you too!");
         break;
       }
     }
